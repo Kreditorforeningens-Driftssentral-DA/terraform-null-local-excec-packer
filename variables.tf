@@ -31,6 +31,6 @@ locals {
     interpreter = ["/usr/bin/env", "bash", "-c"]
     environment = {}
     working_dir = "${path.root}/packer"
-    command     = "packer build ."
+    command     = "packer build ./ && if [ $? -ne 0 ]; then exit 1; fi"
   }
 }

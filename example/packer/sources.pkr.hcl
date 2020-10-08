@@ -15,7 +15,7 @@ source "azure-arm" "ubuntu" {
   location                          = var.resource_group_location
   managed_image_resource_group_name = var.resource_group_name
   managed_image_name                = var.packer_image_name
-  temp_resource_group_name          = "PackerTemp-${var.packer_image_name}"
+  temp_resource_group_name          = "TerraPackBuild-${var.packer_image_name}"
 
   vm_size         = "Standard_B1ls"
   os_type         = "Linux"

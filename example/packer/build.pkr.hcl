@@ -3,9 +3,7 @@
 # ===================================================================
 
 build {
-  sources = [
-    "source.azure-arm.ubuntu",
-  ]
+  sources = ["source.azure-arm.ubuntu"]
 
   provisioner "shell" {
     name             = "demo"

@@ -1,3 +1,4 @@
+# TERRAFORM CONFIGURATION
 terraform {
   required_version = "~> 0.13.0"
   required_providers {
@@ -11,6 +12,10 @@ terraform {
   }
 }
 
+# PROVIDER CONFIGURATIONS
+
+provider null {}
+
 provider azurerm {
   subscription_id         = var.azure.subscription_id
   tenant_id               = var.azure.tenant_id
@@ -18,5 +23,3 @@ provider azurerm {
   client_certificate_path = "${path.cwd}/../.credentials/azure-packer.pfx"
   features {}
 }
-
-provider null {}
